@@ -60,7 +60,7 @@ The next diagrams shows the system architecture:
 ## Getting Started
 
 ### Running the project using Docker and Docker Compose
-The project includes [*dockerfile*](dockerfile) file and [*docker-compose.yml*](docker-compose.yml) file, so you can use `Docker Compose` to start up the application with required softwares. No installation needed.
+The project includes [*docker-compose.yml*](docker-compose.yml) file, frontend app has [*dockerfile*](./frontend/dockerfile) file, and backend app has [*dockerfile*](./backend/dockerfile) file, so you can use `Docker Compose` to start up the application with required softwares. No installation needed.
 
 #### Prerequisites
 You need to install:
@@ -71,14 +71,14 @@ You need to install:
 Clone the project from `github` using the following `git` command at console:
 
 ```bash
-git clone https://github.com/SayedBaladoh/Customer-PhoneNumbers-SQLite3-CRUD.git
+git clone https://github.com/SayedBaladoh/Customers-PhoneNumbers-SQLite3-CRUD.git
 ```
 
 #### Run the project
 - You can start the project using the below `docker-compose` command in the console at the project root directory:
  
 ```bash
-cd Customer-PhoneNumbers-SQLite3-CRUD/
+cd Customers-PhoneNumbers-SQLite3-CRUD/
 
 docker-compose up
 ```
@@ -118,7 +118,7 @@ Backend application will start on port `8181`, So you'll be able to access it un
 - To access `Swagger` documentation to view the available Restful end-points, how to use and test APIs: [http://localhost:8181/swagger-ui.html](http://localhost:8181/swagger-ui.html)
 
 ##### Frontend
-Front application will start on port `4111`, So you'll be able to access it under address `http://localhost:4111`.
+Front application will start on port `4111`, So you'll be able to access it under address [http://localhost:4111](ttp://localhost:4111).
 
 
 ### Running the project for Development 
@@ -128,9 +128,9 @@ These instructions will get you a copy of the project up and running on your loc
 #### Clone the application
 
 ```bash
-git clone https://github.com/SayedBaladoh/Customer-PhoneNumbers-SQLite3-CRUD.git
+git clone https://github.com/SayedBaladoh/Customers-PhoneNumbers-SQLite3-CRUD.git
 
-cd Customer-PhoneNumbers-SQLite3-CRUD
+cd Customers-PhoneNumbers-SQLite3-CRUD/
 ```
 
 #### Running Backend using Maven
@@ -224,11 +224,11 @@ To access the backend application use the following end-points:
 
 #### Running Frontend
 
-These instructions will get you a copy of the front project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the frontend project up and running on your local machine for development and testing purposes.
 
 ##### Prerequisites
 
-You need to install the following software
+You need to install the following software:
 
  * Node.js
  * npm package manager
