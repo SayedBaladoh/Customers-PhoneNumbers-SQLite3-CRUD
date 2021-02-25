@@ -1,8 +1,9 @@
 # Customer International Phone Numbers
 CRUD operations for customers with the implementation of a basic business logic related to the validation of international phone numbers and SQLite 3 database.
 
+# Frontend
+
 ## Table of contents
-* [Requirements](#requirements)
 * [Architecture](#architecture)
 * [Technologies](#technologies)
 * [Getting Started](#getting-started)
@@ -10,19 +11,6 @@ CRUD operations for customers with the implementation of a basic business logic 
 * [Running the project for Development](#running-the-project-for-development)
 * [About me](#about-me)
 * [Acknowledgments](#acknowledgments)
-
-## Requirements
-Create a single page application in Java (Frameworks allowed) that uses the provided database (SQLite 3) to list and categorize country phone numbers.
-
-Phone numbers should be categorized by country, state (valid or not valid), country code and number.
-
-The page should render a list of all phone numbers available in the DB. It should be possible to filter by country and state. Pagination is an extra.
-
-**Topics to take into account**:
-- Try to show your OOP skills
-- Code standards/clean code
-- Do not use external libs to validate the numbers.
-- Unit Tests
 
 ## Architecture
 The next diagrams shows the system architecture:
@@ -36,8 +24,6 @@ The next diagrams shows the system architecture:
  3. **Repository:** is the persistence layer where the CRUD repository is located.
 
 ## Technologies
-
-### Backend:
 
 1. Java 11
 2. Spring Boot
@@ -54,13 +40,11 @@ The next diagrams shows the system architecture:
 7. sonarqube
 8. Docker
 
-### Frontend:
-- Angular
 
 ## Getting Started
 
 ### Running the project using Docker and Docker Compose
-The project includes [*dockerfile*](dockerfile) file and [*docker-compose.yml*](docker-compose.yml) file, so you can use `Docker Compose` to start up the application with required softwares. No installation needed.
+The project includes [*Dockerfile*](Dockerfile) file and [*docker-compose.yml*](../docker-compose.yml) file, so you can use `Docker Compose` to start up the application with required softwares. No installation needed.
 
 #### Prerequisites
 You need to install:
@@ -71,14 +55,14 @@ You need to install:
 Clone the project from `github` using the following `git` command at console:
 
 ```bash
-git clone https://github.com/SayedBaladoh/Customer-PhoneNumbers-SQLite3-CRUD.git
+git clone https://github.com/SayedBaladoh/Customers-PhoneNumbers-SQLite3-CRUD.git
 ```
 
 #### Run the project
 - You can start the project using the below `docker-compose` command in the console at the project root directory:
  
 ```bash
-cd Customer-PhoneNumbers-SQLite3-CRUD/
+cd Customers-PhoneNumbers-SQLite3-CRUD/
 
 docker-compose up
 ```
@@ -108,50 +92,37 @@ You should see the following running containers:
 
 Sonarqube, Customer Management Frontend and Backend are UP and RUNNING
 
-#### Access the application
+#### Access the Backend application
 
-##### Backend
 Backend application will start on port `8181`, So you'll be able to access it under address `http://localhost:8181`.
 	
 - To view `details` about the backend application: [http://localhost:8181/actuator/info](http://localhost:8181/actuator/info)
 - For `Check Health`: [http://localhost:8181/actuator/health](http://localhost:8181/actuator/health)
 - To access `Swagger` documentation to view the available Restful end-points, how to use and test APIs: [http://localhost:8181/swagger-ui.html](http://localhost:8181/swagger-ui.html)
 
-##### Frontend
-Front application will start on port `4111`, So you'll be able to access it under address `http://localhost:4111`.
 
-
-### Running the project for Development 
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-#### Clone the application
-
-```bash
-git clone https://github.com/SayedBaladoh/Customer-PhoneNumbers-SQLite3-CRUD.git
-
-cd Customer-PhoneNumbers-SQLite3-CRUD
-```
-
-#### Running Backend using Maven
+### Running the Backend application for Development using Maven
 
 These instructions will get you a copy of the backend project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-##### Prerequisites
+#### Prerequisites
 
-You need to install the following software
+You need to install the following software:
 
  * Java 11+
-
  * Maven 3.0+
 
-##### Installing
+#### Installing
 
 Steps to Setup the project:
 
-1. **Goto to the Backend application**
+1. **Clone the application**
 
 ```bash
+git clone https://github.com/SayedBaladoh/Customers-PhoneNumbers-SQLite3-CRUD.git
+
+cd Customers-PhoneNumbers-SQLite3-CRUD
+
 cd backend/
 ```
 
@@ -204,7 +175,7 @@ cd backend/
 	java -jar target/phone-numbers-0.0.1-SNAPSHOT.jar
 	```
 
-##### Access the Backend application
+#### Access the Backend application
 
 To access the backend application use the following end-points:
 
@@ -221,46 +192,6 @@ To access the backend application use the following end-points:
 	Use Swagger to view and test the available Restful end-points.
 
 	+ `http://localhost:8080/swagger-ui.html`
-
-#### Running Frontend
-
-These instructions will get you a copy of the front project up and running on your local machine for development and testing purposes.
-
-##### Prerequisites
-
-You need to install the following software
-
- * Node.js
- * npm package manager
- * Angular
-
-Follow this link for [Setting up the local environment  for Angular development using the Angular CLI](https://angular.io/guide/setup-local)
-
-#### Installing
-
-Steps to Setup the project:
-
-1. **Goto to the Backend application**
-
-```bash
-cd frontend/
-```
-
-2. **Change the baseUrl for Backend service**
-
-	+ open `src/app/services/customer.service.ts` file.
-	+ change the `baseUrl` const.
-	
-3. **Run Frontend**
-
-	You can run the frontend by typing the following command:
-
-	```bash
-	ng serve
-	```
-##### Access the Frontend application
-
-To access the frontend application use the `http://localhost:4200/` url.
 
 ## About me
 

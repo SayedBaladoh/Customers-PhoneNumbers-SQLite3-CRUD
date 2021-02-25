@@ -1,3 +1,6 @@
+# Customer International Phone Numbers
+CRUD operations for customers with the implementation of a basic business logic related to the validation of international phone numbers and SQLite 3 database.
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
