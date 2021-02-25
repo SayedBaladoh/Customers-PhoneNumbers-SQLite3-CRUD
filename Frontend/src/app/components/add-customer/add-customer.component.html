@@ -1,0 +1,143 @@
+<div style="width: 400px; margin: auto;">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <h4>Customer</h4>
+        <form name="customerForm" #f="ngForm" (ngSubmit)="f.form.valid && saveCustomer()" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              required
+              [(ngModel)]="customer.name"
+              name="name"
+              #nameref="ngModel"
+              placeholder="Customer name"
+            />
+            <div *ngIf="nameref.errors && (nameref.touched || nameref.dirty)" class ="alert alert-danger">
+              <div *ngIf="nameref.errors.required"> 
+                Name is required.
+              </div> 
+            </div>
+            <div *ngIf="nameref.errors && nameref.errors.backend" class ="alert alert-danger text-style"> 
+              {{ backendError.name}}
+            </div> 
+          </div>
+
+          <div class="form-group">
+            <label for="country_code">Country Code</label>
+            <input
+              type="text"
+              class="form-control"
+              id="country_code"
+              required
+              [(ngModel)]="customer.country_code"
+              name="country_code"
+              [pattern]="countryCodePattern"
+              #countryCoderef="ngModel"
+              placeholder="Customer country code. Like: EG"
+            />
+            <div *ngIf="countryCoderef.errors && (countryCoderef.touched || countryCoderef.dirty)" class ="alert alert-danger">
+              <div *ngIf="countryCoderef.errors.required"> 
+                Country code is required.
+              </div>
+              <div *ngIf="countryCoderef.errors?.pattern">
+                Country code is not valid.
+              </div>
+              <div *ngIf="countryCoderef.errors.backend" class ="text-style"> 
+                {{ backendError.country_code }}
+              </div>   
+            </div> 
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              required
+              [(ngModel)]="customer.phone"
+              name="phone"
+              [pattern]="phonePattern"
+              #phoneref="ngModel"
+              placeholder="Customer phone. like: (20) 1234567890"
+            />
+            <div *ngIf="phoneref.errors && (phoneref.touched || phoneref.dirty)" class ="alert alert-danger">
+              <div *ngIf="phoneref.errors.required"> 
+                Phone is required.
+              </div>
+              <div *ngIf="phoneref.errors?.pattern">
+                Phone is not valid.
+              </div>
+              <div *ngIf="phoneref.errors.backend" class ="text-style"> 
+                {{ backendError.phone }}
+              </div>
+            </div>            
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              required
+              [(ngModel)]="customer.email"
+              name="email"
+              [pattern]="emailPattern"
+              #emailref="ngModel"
+              placeholder="Customer email"
+            />
+            <div *ngIf="emailref.errors && (emailref.touched || emailref.dirty)" class ="alert alert-danger">
+              <div *ngIf="emailref.errors.required"> 
+                Email is required.
+              </div>
+              <div *ngIf="emailref.errors?.pattern">
+                Email is not valid.
+              </div>
+              <div *ngIf="emailref.errors.backend" class ="text-style"> 
+                {{ backendError.email }}
+              </div> 
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select 
+            id="gender" 
+            name="gender"
+            class="form-control"
+            [(ngModel)]="customer.gender"
+            required
+            #genderref="ngModel"
+            >
+              <option value="">Please select a gender</option>
+              <option *ngFor="let gender of genders" [ngValue]="gender">
+                {{ gender }}
+              </option>
+            </select>
+            <div *ngIf="genderref.errors && (genderref.touched || genderref.dirty)" class ="alert alert-danger">
+              <div *ngIf="genderref.errors.required"> 
+                Gender is required.
+              </div> 
+              <div *ngIf="genderref.errors.backend" class ="text-style"> 
+                {{ backendError.gender }}
+              </div>  
+            </div>            
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+          <!-- <pre>{{f.value | json}}</pre> -->
+        </form>
+      </div>
+      
+
+      <div *ngIf="submitted">
+        <h4>You submitted new customer successfully!</h4>
+        <button class="btn btn-success" (click)="newCustomer()">Add new customer</button> 
+        <a class="btn btn-primary" href="/customers" role="button">List customers</a>
+
+      </div>
+    </div>
+  </div>

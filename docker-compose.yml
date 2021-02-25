@@ -8,7 +8,7 @@ services:
       - 9000:9000
   
   backend:
-    build: ./backend
+    build: ./Backend
     container_name: customer-backend
     ports:
       - 8181:8080
@@ -16,7 +16,7 @@ services:
       - sonarqube
       
   frontend:
-    build: ./frontend
+    build: ./Frontend
     container_name: customer-frontend
     ports:
       - 4111:80

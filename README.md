@@ -60,7 +60,7 @@ The next diagrams shows the system architecture:
 ## Getting Started
 
 ### Running the project using Docker and Docker Compose
-The project includes [*docker-compose.yml*](docker-compose.yml) file, frontend app has [*dockerfile*](./frontend/dockerfile) file, and backend app has [*dockerfile*](./backend/dockerfile) file, so you can use `Docker Compose` to start up the application with required softwares. No installation needed.
+The project includes [*docker-compose.yml*](docker-compose.yml) file, frontend app has [*Dockerfile*](./Frontend/Dockerfile) file, and backend app has [*Dockerfile*](./Backend/Dockerfile) file, so you can use `Docker Compose` to start up the application with required softwares. No installation needed.
 
 #### Prerequisites
 You need to install:
@@ -152,7 +152,7 @@ Steps to Setup the project:
 1. **Goto to the Backend application**
 
 ```bash
-cd backend/
+cd Backend/
 ```
 
 2. **Change application configs as you want**
@@ -243,7 +243,7 @@ Steps to Setup the project:
 1. **Goto to the Backend application**
 
 ```bash
-cd frontend/
+cd Frontend/
 ```
 
 2. **Change the baseUrl for Backend service**
