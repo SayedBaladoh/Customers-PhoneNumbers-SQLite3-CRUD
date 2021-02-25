@@ -8,7 +8,7 @@ CRUD operations for customers with the implementation of a basic business logic 
 * [Technologies](#technologies)
 * [Getting Started](#getting-started)
 * [Running the project using Docker and Docker Compose](#running-the-project-using-docker-and-docker-compose)
-* [Running the project for Development](#running-the-project-for-development)
+* [Running the Backend application for Development using Maven](#running-the-backend-application-for-development-using-maven)
 * [About me](#about-me)
 * [Acknowledgments](#acknowledgments)
 
