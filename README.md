@@ -118,7 +118,7 @@ Backend application will start on port `8181`, So you'll be able to access it un
 - To access `Swagger` documentation to view the available Restful end-points, how to use and test APIs: [http://localhost:8181/swagger-ui.html](http://localhost:8181/swagger-ui.html)
 
 ##### Frontend
-Front application will start on port `4111`, So you'll be able to access it under address [http://localhost:4111](ttp://localhost:4111).
+Front application will start on port `4111`, So you'll be able to access it under address [http://localhost:4111](http://localhost:4111).
 
 
 ### Running the project for Development 
@@ -135,11 +135,11 @@ cd Customers-PhoneNumbers-SQLite3-CRUD/
 
 #### Running Backend using Maven
 
-These instructions will get you a copy of the backend project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you the `backend` project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ##### Prerequisites
 
-You need to install the following software
+You need to install the following software:
 
  * Java 11+
 
@@ -224,7 +224,7 @@ To access the backend application use the following end-points:
 
 #### Running Frontend
 
-These instructions will get you a copy of the frontend project up and running on your local machine for development and testing purposes.
+These instructions will get you the `frontend` project up and running on your local machine for development and testing purposes.
 
 ##### Prerequisites
 
